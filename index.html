@@ -1,13 +1,57 @@
 <!DOCTYPE html>
-<html ng-app="app">
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>baseAngular</title>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js"></script>
-</head>
-<body>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>baseAngular</title>
+  </head>
+  <body>
 
+<div id="app1">
+
+  <div ng-controller="ControllerOne">
+    <h1>{{ testInput }}</h1>
+
+    <label for="App1Ctrl1Input">App1Ctrl1Input</label>
+    <input name="App1Ctrl1Input" ng-model="testInput"></input>
+
+    <button type="button" ng-click="emitChange()">Emit</button>
+
+  </div>
+
+  <div ng-controller="ControllerTwo">
+    <h1>{{ testInput }}</h1>
+
+    <label for="App1Ctrl2Input">App1Ctrl2Input</label>
+    <input name="App1Ctrl2Input" ng-model="testInput"></input>
+
+    <button type="button" ng-click="emitChange()">Emit</button>
+
+  </div>
+
+</div>
+
+
+
+<div id="app2">
+
+  <div ng-controller="ControllerOne">
+    <h1>{{ testInput }}</h1>
+
+    <label for="App2Ctrl1Input">App2Ctrl1Input</label>
+    <input name="App2Ctrl1Input" ng-model="testInput"></input>
+  </div>
+
+  <div ng-controller="ControllerTwo">
+    <h1>{{ testInput }}</h1>
+
+    <label for="App2Ctrl2Input">App2Ctrl2Input</label>
+    <input name="App2Ctrl2Input" ng-model="testInput"></input>
+  </div>
+
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js"></script>
 <script src="app.js"></script>
 
-</body>
+  </body>
 </html>
